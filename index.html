@@ -8,12 +8,31 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 <body>
-    <div class="container">
+
+    <div>
+        <p id="timer" class="timer"></p>
+    </div>
+
+    <div id="welcome" class="container">
         <h1>Coding JavaScript Quiz Challeange</h1>
         <p>Get many as correct to get a high score with the JavaScript Challeange</p>
         <button id="startQuiz" class="start-quiz">Start Quiz</button>
     </div>
+    <div id="question" class="container">
+    </div>
 
+    <div id="leaderScore" class="leaderHighScore">
+        <div>
+                <form id="score-board" method="POST">
+                  <label for="score-text"></label>
+                  <input type="text" placeholder="Name here" name="score-name" id="score-text" />
+                  <button id="submit-button">Submit</button>
+                </form>
+                <ul id="leader-list"></ul>
+        </div>
+
+ </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
