@@ -79,7 +79,7 @@ function display(){
         var li3 = document.createElement("li");
         var li4 = document.createElement("li");
         h2EL.textContent = "Commonly used data types do not include;";
-        li1.textContent = "Srings";
+        li1.textContent = "Strings";
         li2.textContent = "Booleans";
         li3.textContent = "Alerts";
         li4.textContent = "Numbers";
@@ -103,4 +103,6 @@ function display(){
 }
 function check(event){
     console.log(event.target.textContent)
+    var quizAnswers = (answersScore('Curely Bracekets') + answersScore('All of the Above') + answersScore('Console Log') + answersScore('Alerts'));
+    
 }
