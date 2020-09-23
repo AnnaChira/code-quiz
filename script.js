@@ -1,22 +1,35 @@
 var questionIndex = 0
+var timeLeft = 60
 
 var startQuiz = document.getElementById("startQuiz");
 startQuiz.addEventListener("click", function(){
     console.log("test")
     var welcome = document.getElementById("welcome");
     welcome.style.display = "none";
+    startTimer();
     display();
 })
+function startTimer(){
+    timerInterval = setInterval(function () {
+        timeLeft--;
+        timer.textContent = "Timer: " + timeLeft;
+        if (timeLeft === 0) {
+            clearInterval(timerInterval);
+            showScore();
+        }
+    }, 1000);
+}
+var liQuestion = document.querySelector("li");
+liQuestion.addEventListener("click", function(){
+    var clickItem = this.textContent
+    if {
 
-timerInterval = setInterval(function () {
-    timeLeft--;
-    timer.textContent = "Timer: " + timeLeft;
-    if (timeLeft === 0) {
-        clearInterval(timerInterval);
-        showScore();
     }
-}, 1000);
-render(startQuiz);   
+    else{
+        
+    }
+})
+//render(startQuiz);   
 
 function display(){
     if (questionIndex == 0){
@@ -106,3 +119,11 @@ function check(event){
     var quizAnswers = (answersScore('Curely Bracekets') + answersScore('All of the Above') + answersScore('Console Log') + answersScore('Alerts'));
     
 }
+
+function showScore(){
+    var gameOverHTML = "<h1>Results</h1>";
+    gameOverHTML += "<h2 id = 'score'> Your scores:" + quiz.score + "</h2>";
+    var element = document.getElementById("LenderHighScore");
+    element.innerHTML = gameOverHTML;
+}
+var quiz = startQuiz(questionIndex);
