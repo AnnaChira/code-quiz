@@ -1,20 +1,20 @@
-var questionIndex = 0
-var timeLeft = 230
+var questionIndex = 0;
+var timeLeft = 230;
 
-init();
+//init();
 
-function init(){
-    leaderScore.style.display = "none";
-    quizBox.style.display = "none";
-    var lastUser = JSON.parse(localStorage.getItem("leaderHighScore"));
-    if (lastUser !== null) {
-      leaders = lastUser;
-    }
-}
+//function init(){
+    //leaderScore.style.display = "none";
+    //quizBox.style.display = "none";
+    //var lastUser = JSON.parse(localStorage.getItem("leaderHighScore"));
+    //if (lastUser !== null) {
+      //leaders = lastUser;
+    //}
+//}
 
 var startQuiz = document.getElementById("startQuiz");
 startQuiz.addEventListener("click", function(){
-    console.log("test")
+    console.log("test");
     var welcome = document.getElementById("welcome");
     welcome.style.display = "none";
     startTimer();
@@ -32,32 +32,39 @@ function startTimer(){
 }
 var liQuestion = document.querySelector("li");
 liQuestion.addEventListener("click", function(){
-    var clickItem = this.textContent
-    if (li2.textContent === "Curely Brackets") {
+    var clickItem = this.textContent;
+    if (li2.textContent === "Curely Brackets"){
         clearInterval(timerInterval);
     }
-    else (li1.textContent && li3.textContent && li4.textContent){
+    else (li1.textContent && li3.textContent && li4.textContent);{
         var timeLeft = 10;
         alert("Time out!! :(");
     }
     if (li4.textContent === "All the Above"){
         clearInterval(timerInterval);
     }
-    else (li1.textContent && li2.textContent && li3.textContent){
+    else (li1.textContent && li2.textContent && li3.textContent);{
        var timeleft = 10; 
         alert("Time out!! :(");
     }
     if (li4.textContent === "Parantheses"){
         clearInterval(timerInterval);
     }
-    else(li1.textContent && li2.textContent && li3.textContent){
+    else(li1.textContent && li2.textContent && li3.textContent);{
         var timeleft = 10;
         alert("Time out!! :(");
     }
     if (li4.textContent === "Console Log"){
         clearInterval(timerInterval);
     }
-    else(li1.textContent && li2.textContent && li3.textContent){
+    else(li1.textContent && li2.textContent && li3.textContent);{
+        var timeleft = 10;
+        alert("Time out!! :(");
+    }
+    if (li3.textContent === "Alerts"){
+        clearInterval(timerInterval);
+    }
+    else(li1.textContent && li2.textContent && li4.textContent);{
         var timeleft = 10;
         alert("Time out!! :(");
     }
@@ -146,10 +153,18 @@ function display(){
 
     questionIndex++;
 }
+
+function renderQuestions(){
+    questions.innerHTML = questionArr[i].question;
+    choiceA.innerHTML = questionArr[i].choiceA;
+    choiceB.innerHTML = questionArr[i].choiceB;
+    choiceC.innerHTML = questionArr[i].choiceC;
+};
+
 function check(event){
     console.log(event.target.textContent)
     var quizAnswers = (answersScore('Curely Bracekets') + answersScore('All of the Above') + answersScore('Console Log') + answersScore('Alerts'));
-    
+    return quizAnswers;
 }
 
 function showScore(){
