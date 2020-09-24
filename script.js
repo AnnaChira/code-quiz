@@ -34,39 +34,34 @@ var liQuestion = document.querySelector("li");
 liQuestion.addEventListener("click", function(){
     var clickItem = this.textContent;
     if (li2.textContent === "Curely Brackets"){
-        clearInterval(timerInterval);
+        timer--;
     }
     else (li1.textContent && li3.textContent && li4.textContent);{
-        var timeLeft = 10;
-        alert("Time out!! :(");
+        timeLeft -=15;
     }
     if (li4.textContent === "All the Above"){
-        clearInterval(timerInterval);
+        timeleft--;
     }
     else (li1.textContent && li2.textContent && li3.textContent);{
-       var timeleft = 10; 
-        alert("Time out!! :(");
+        timeLeft -=15;
     }
     if (li4.textContent === "Parantheses"){
-        clearInterval(timerInterval);
+        timeleft--;
     }
     else(li1.textContent && li2.textContent && li3.textContent);{
-        var timeleft = 10;
-        alert("Time out!! :(");
+        timeLeft -=15;
     }
     if (li4.textContent === "Console Log"){
-        clearInterval(timerInterval);
+        timeleft--;
     }
     else(li1.textContent && li2.textContent && li3.textContent);{
-        var timeleft = 10;
-        alert("Time out!! :(");
+        timeLeft -=15;
     }
     if (li3.textContent === "Alerts"){
-        clearInterval(timerInterval);
+        timeleft--;
     }
     else(li1.textContent && li2.textContent && li4.textContent);{
-        var timeleft = 10;
-        alert("Time out!! :(");
+        timeLeft -=15;
     }
 })
 
@@ -153,13 +148,6 @@ function display(){
 
     questionIndex++;
 }
-
-function renderQuestions(){
-    questions.innerHTML = questionArr[i].question;
-    choiceA.innerHTML = questionArr[i].choiceA;
-    choiceB.innerHTML = questionArr[i].choiceB;
-    choiceC.innerHTML = questionArr[i].choiceC;
-};
 
 function check(event){
     console.log(event.target.textContent)
