@@ -1,5 +1,16 @@
 var questionIndex = 0
-var timeLeft = 60
+var timeLeft = 230
+
+init();
+
+function init(){
+    leaderScore.style.display = "none";
+    quizBox.style.display = "none";
+    var lastUser = JSON.parse(localStorage.getItem("leaderHighScore"));
+    if (lastUser !== null) {
+      leaders = lastUser;
+    }
+}
 
 var startQuiz = document.getElementById("startQuiz");
 startQuiz.addEventListener("click", function(){
@@ -22,14 +33,35 @@ function startTimer(){
 var liQuestion = document.querySelector("li");
 liQuestion.addEventListener("click", function(){
     var clickItem = this.textContent
-    if {
-
+    if (li2.textContent === "Curely Brackets") {
+        clearInterval(timerInterval);
     }
-    else{
-        
+    else (li1.textContent && li3.textContent && li4.textContent){
+        var timeLeft = 10;
+        alert("Time out!! :(");
+    }
+    if (li4.textContent === "All the Above"){
+        clearInterval(timerInterval);
+    }
+    else (li1.textContent && li2.textContent && li3.textContent){
+       var timeleft = 10; 
+        alert("Time out!! :(");
+    }
+    if (li4.textContent === "Parantheses"){
+        clearInterval(timerInterval);
+    }
+    else(li1.textContent && li2.textContent && li3.textContent){
+        var timeleft = 10;
+        alert("Time out!! :(");
+    }
+    if (li4.textContent === "Console Log"){
+        clearInterval(timerInterval);
+    }
+    else(li1.textContent && li2.textContent && li3.textContent){
+        var timeleft = 10;
+        alert("Time out!! :(");
     }
 })
-//render(startQuiz);   
 
 function display(){
     if (questionIndex == 0){
