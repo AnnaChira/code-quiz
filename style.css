@@ -9,11 +9,15 @@ p {
 .timer {
     align-items: left;
     font-size: 20px;
+    float: right;
 }
 .leaderScore{
     align-items: right;
     font-size: 20px;
+    float: left;
 }
 .startQuiz{
     align-items: center;
+    color: blue;
+    font-size: 16px;
 }

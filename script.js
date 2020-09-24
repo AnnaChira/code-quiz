@@ -149,6 +149,7 @@ function display(){
     questionIndex++;
 }
 
+
 function check(event){
     console.log(event.target.textContent)
     var quizAnswers = (answersScore('Curely Bracekets') + answersScore('All of the Above') + answersScore('Console Log') + answersScore('Alerts'));
